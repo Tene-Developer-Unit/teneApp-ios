@@ -1,0 +1,137 @@
+<html dir="rtl" xmlns="http://www.w3.org/1999/html">
+<head>
+    <style type="text/css">
+        html{background:url("../background/mikbg.gif");
+
+        no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size:cover;-o-background-size:cover; background-size:cover;
+        }
+
+
+
+        #slideshow {
+    margin: 30px 0;
+    position: relative;
+    width: 300;
+    height: 100;
+    padding: 1px;
+    box-shadow: 0 0 0 rgba(0,0,0,0.4);
+}
+
+#slideshow > div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+    </style>
+
+<script>
+
+    $('#iframe').load(function (e) {
+    var iframe = $("#iframe")[0];
+
+    if ( iframe.innerHTML() ) {
+        // get and check the Title (and H tags if you want)
+        var ifTitle = iframe.contentDocument.title;
+        if ( ifTitle.indexOf("404")>=0 ) {
+        $("#iframe").attr("src", "file:///android_asset/httpFiles/erorr.html");        }
+    } else {
+        // didn't load
+    }
+});
+
+</script>
+
+    <script src="jquery-3.3.1.min.js">
+</script>
+    <script>
+
+$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  3000);
+</script>
+</head>
+<body >
+
+<img width="100%" src="../background/miktzoa_logo.png">
+
+<!--<h1 style="text-align: center;color: #3d777f;">לא יוצאים לחיים, בלי מקצוע לחיים!</h1>-->
+<br>
+<br>
+<video id="video01" width="300"  controls>
+    <source src="https://dovermediastorage.blob.core.windows.net/asset-c1f2d309-3e05-4758-b478-35cc76fcb718/miktsoala_320x180_AACAudio_100.mp4?autoplay=1&sv=2015-07-08&sr=c&si=5ee1968f-2d83-4a7e-ad10-d26c7607fec3&sig=DuzOQJ3GEO1nDk4V92auV3ASOly3XrpEOYNnt5JdMjM%3D&se=2028-02-19T15%3A29%3A56Z" type="video/mp4" />
+    <p>no support text</p>
+</video>
+
+<br>
+
+
+<p style="text-align: center; color: #2f6067;">
+    <b>מתגייסים לחילות אט"ל, מצטיינים בשירות ומשתחררים עם "מקצוע לחיים".</b>
+    <br>
+    <br>
+    תכנית "מקצוע לחיים" - תכנית צה"לית בהובלת אגף הטכנולוגיה והלוגיסטיקה. התכנית שמה לה ליעד לחזק את המשק והתעשייה בישראל באמצעות שילוב כוח אדם טכנולוגי, איכותי, משכיל ומיומן בעבודה בתעשייה.
+    <br>
+</p>
+<center>
+<div>
+
+
+    <iframe id="iframe" width="300" src="https://www.youtube.com/embed/zC13uEn9SRY?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<br><br>
+
+</div>
+<div>
+    <p style="text-align: center; color: #2f6067;">
+
+        התכנית מתקיימת בשיתוף עם האגף והקרן להכוונת חיילים משוחררים, משרד הכלכלה והתעשייה האזרחית המאפשרת שילוב חיילים ממקצועות טכנולוגיים מובילים בתעשייה האזרחית במגוון ערוצים.
+        המסלולים השונים מאפשרים לך להתגייס לשירות משמעותי במגוון תפקידים ולהשתחרר מהצבא עם מקצוע ביד.
+        התכנית עוזרת לך לבנות את עתידך המקצועי ומאפשרת לך לרכוש מקצוע מבוקש בנוסף לתפקיד.
+    </p>
+
+
+    <iframe width="300" src="https://www.youtube-nocookie.com/embed/Ky900ktXf2k?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+    <br>
+
+
+</center>
+
+<!--slide gallery of halfe men-->
+
+<div>
+
+
+    <div id="slideshow">
+        <div>
+            <img width="300" height="auto" src="../images_mitzoa/mikhalfe1.jpeg">
+        </div>
+        <div>
+            <img width="300" height="150" src="../images_mitzoa/mikhalfe2.jpeg">
+        </div>
+        <div>
+            <img width="300" height="auto" src="../images_mitzoa/mikhalfe3.jpeg">
+        </div>
+        <div>
+            <img width="300" height="auto" src="../images_mitzoa/mikhalfe4.jpeg">
+        </div>
+
+    </div>
+
+</div>
+<br><br><br>
+
+
+</body>
+</html>
